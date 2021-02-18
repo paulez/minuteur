@@ -32,5 +32,6 @@ private:
     void startCountDown(QTime startTime);
     void updateTimeLabel();
     void stopTimer();
+    void notifyEnd();
 };
 #endif // MINUTEUR_H

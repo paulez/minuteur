@@ -37,11 +37,17 @@ void Minuteur::updateTimeLabel() {
 
 void Minuteur::updateCountDown(){
     time = time.addMSecs(-TIMER_INTERVAL);
-    if (time == QTime(0,0))
-            stopTimer();
+    if (time == QTime(0,0)){
+        stopTimer();
+        notifyEnd();
+    }
     updateTimeLabel();
 }
 
 void Minuteur::stopTimer(){
     timer.stop();
+}
+
+void Minuteur::notifyEnd(){
+    system("notify-send --urgency=critical 'Minuteur' 'Minuteur is over!'");
 }
