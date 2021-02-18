@@ -22,7 +22,7 @@ public:
 
 private slots:
     void on_pushButton_clicked();
-    void updateCountDown();
+    void updateTime();
 
 private:
     Ui::Minuteur *ui;
