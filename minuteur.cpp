@@ -6,6 +6,7 @@ Minuteur::Minuteur(QWidget *parent)
     , ui(new Ui::Minuteur)
 {
     ui->setupUi(this);
+    connect(&timer, SIGNAL(timeout()), this, SLOT(updateCountDown()));
 }
 
 Minuteur::~Minuteur()
@@ -18,7 +19,6 @@ void Minuteur::startCountDown(QTime userStartTime)
     time = userStartTime;
     updateTimeLabel();
     timer.start(TIMER_INTERVAL);
-    connect(&timer, SIGNAL(timeout()), this, SLOT(updateCountDown()));
 }
 
 
@@ -37,5 +37,11 @@ void Minuteur::updateTimeLabel() {
 
 void Minuteur::updateCountDown(){
     time = time.addMSecs(-TIMER_INTERVAL);
+    if (time == QTime(0,0))
+            stopTimer();
     updateTimeLabel();
+}
+
+void Minuteur::stopTimer(){
+    timer.stop();
 }

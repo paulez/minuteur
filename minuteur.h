@@ -31,5 +31,6 @@ private:
     QString remainingTimeStr();
     void startCountDown(QTime startTime);
     void updateTimeLabel();
+    void stopTimer();
 };
 #endif // MINUTEUR_H
