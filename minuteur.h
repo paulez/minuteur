@@ -21,7 +21,8 @@ public:
     ~Minuteur();
 
 private slots:
-    void on_pushButton_clicked();
+    void on_pushButtonStart_clicked();
+    void on_pushButtonPlusOne_clicked();
     void updateTime();
 
 private:

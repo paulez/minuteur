@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>419</width>
-    <height>281</height>
+    <width>325</width>
+    <height>146</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,10 +17,10 @@
    <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>40</y>
-      <width>224</width>
-      <height>53</height>
+      <x>30</x>
+      <y>10</y>
+      <width>276</width>
+      <height>87</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -28,15 +28,28 @@
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
         <widget class="QTimeEdit" name="timeEdit">
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>0</height>
+          </size>
+         </property>
          <property name="displayFormat">
           <string>HH:mm:ss</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="pushButtonStart">
          <property name="text">
           <string>Start</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButtonPlusOne">
+         <property name="text">
+          <string>+1</string>
          </property>
         </widget>
        </item>
@@ -44,8 +57,16 @@
      </item>
      <item>
       <widget class="QLabel" name="timeLabel">
+       <property name="font">
+        <font>
+         <pointsize>32</pointsize>
+        </font>
+       </property>
        <property name="text">
-        <string>TextLabel</string>
+        <string>00:00:00</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </item>
@@ -57,7 +78,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>419</width>
+     <width>325</width>
      <height>22</height>
     </rect>
    </property>

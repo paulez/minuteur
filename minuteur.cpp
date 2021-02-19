@@ -59,7 +59,7 @@ void Minuteur::startCountDown(QTime userStartTime)
  * @brief Minuteur::on_pushButton_clicked
  * Start the timer
  */
-void Minuteur::on_pushButton_clicked()
+void Minuteur::on_pushButtonStart_clicked()
 {
     startCountDown(ui->timeEdit->time());
 }
@@ -69,7 +69,8 @@ void Minuteur::on_pushButton_clicked()
  * Format remaining time
  * @return
  */
-QString Minuteur::remainingTimeStr(){
+QString Minuteur::remainingTimeStr()
+{
     return time.toString();
 }
 
@@ -77,7 +78,8 @@ QString Minuteur::remainingTimeStr(){
  * @brief Minuteur::updateTimeLabel
  * Update time display. To be run when the timer expires.
  */
-void Minuteur::updateTimeLabel() {
+void Minuteur::updateTimeLabel()
+{
     ui->timeLabel->setText(time.toString());
 }
 
@@ -86,9 +88,11 @@ void Minuteur::updateTimeLabel() {
  * Update timer after timer has expired.
  * Triggers notification when the remaining time is 0.
  */
-void Minuteur::updateTime(){
+void Minuteur::updateTime()
+{
     time = time.addMSecs(-TIMER_INTERVAL);
-    if (time == QTime(0,0)){
+    if (time == QTime(0,0))
+    {
         stopTimer();
         notifyEnd();
     }
@@ -99,7 +103,8 @@ void Minuteur::updateTime(){
  * @brief Minuteur::stopTimer
  * Stop the timer.
  */
-void Minuteur::stopTimer(){
+void Minuteur::stopTimer()
+{
     timer.stop();
 }
 
@@ -107,6 +112,18 @@ void Minuteur::stopTimer(){
  * @brief Minuteur::notifyEnd
  * Notify user that the timer is over
  */
-void Minuteur::notifyEnd(){
+void Minuteur::notifyEnd()
+{
     system("notify-send --urgency=critical 'Minuteur' 'Minuteur is over!'");
 }
+
+void Minuteur::on_pushButtonPlusOne_clicked()
+{
+    if (timer.isActive())
+    {
+        time = time.addSecs(60);
+        updateTimeLabel();
+    } else {
+        ui->timeEdit->setTime(ui->timeEdit->time().addSecs(60));
+    }
+ }
