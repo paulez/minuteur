@@ -35,6 +35,8 @@ Minuteur::Minuteur(QWidget *parent)
     , ui(new Ui::Minuteur)
 {
     ui->setupUi(this);
+    ui->pushButtonStart->setIcon(style()->standardIcon(QStyle::SP_MediaPlay));
+
     connect(&timer, SIGNAL(timeout()), this, SLOT(updateTime()));
 }
 

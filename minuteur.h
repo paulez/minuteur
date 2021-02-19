@@ -2,6 +2,7 @@
 #define MINUTEUR_H
 
 #include <QMainWindow>
+#include <QStyle>
 #include <QTime>
 #include <QTimer>
 #include <QDebug>
