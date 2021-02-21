@@ -4,13 +4,13 @@
 <context>
     <name>Minuteur</name>
     <message>
-        <location filename="minuteur.ui" line="14"/>
+        <location filename="minuteur.ui" line="20"/>
         <location filename="minuteur_autogen/include/ui_minuteur.h" line="88"/>
         <source>Minuteur</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="minuteur.ui" line="51"/>
+        <location filename="minuteur.ui" line="56"/>
         <location filename="minuteur_autogen/include/ui_minuteur.h" line="89"/>
         <source>HH:mm:ss</source>
         <translation type="unfinished"></translation>
@@ -21,7 +21,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="minuteur.ui" line="99"/>
+        <location filename="minuteur.ui" line="104"/>
         <source>00:00:00</source>
         <translation type="unfinished"></translation>
     </message>
