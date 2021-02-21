@@ -5,29 +5,20 @@
     <name>Minuteur</name>
     <message>
         <location filename="minuteur.ui" line="20"/>
-        <location filename="minuteur_autogen/include/ui_minuteur.h" line="88"/>
+        <location filename="minuteur_autogen/include/ui_minuteur.h" line="127"/>
         <source>Minuteur</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="minuteur.ui" line="56"/>
-        <location filename="minuteur_autogen/include/ui_minuteur.h" line="89"/>
+        <location filename="minuteur_autogen/include/ui_minuteur.h" line="128"/>
         <source>HH:mm:ss</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="minuteur_autogen/include/ui_minuteur.h" line="90"/>
-        <source>Start</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="minuteur.ui" line="104"/>
+        <location filename="minuteur_autogen/include/ui_minuteur.h" line="132"/>
         <source>00:00:00</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="minuteur_autogen/include/ui_minuteur.h" line="91"/>
-        <source>TextLabel</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
