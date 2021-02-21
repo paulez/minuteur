@@ -26,6 +26,8 @@ private slots:
     void on_pushButtonPlusOne_clicked();
     void updateTime();
 
+    void on_pushButtonStop_clicked();
+
 private:
     Ui::Minuteur *ui;
     QTimer timer;
@@ -33,6 +35,7 @@ private:
     QString remainingTimeStr();
     void pauseCountDown();
     void startCountDown(QTime startTime);
+    void stopCountDown();
     void updateTimeLabel();
     void stopTimer();
     void notifyEnd();

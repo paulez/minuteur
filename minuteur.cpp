@@ -36,7 +36,8 @@ Minuteur::Minuteur(QWidget *parent)
 {
     ui->setupUi(this);
     ui->pushButtonStart->setIcon(style()->standardIcon(QStyle::SP_MediaPlay));
-
+    ui->pushButtonStop->setIcon(style()->standardIcon(QStyle::SP_MediaStop));
+    ui->pushButtonPlusOne->setIcon(style()->standardIcon(QStyle::SP_MediaSeekForward));
     connect(&timer, SIGNAL(timeout()), this, SLOT(updateTime()));
 }
 
@@ -65,6 +66,14 @@ void Minuteur::pauseCountDown()
     ui->pushButtonStart->setIcon(style()->standardIcon(QStyle::SP_MediaPlay));
 }
 
+void Minuteur::stopCountDown()
+{
+    stopTimer();
+    time = QTime(0,0);
+    updateTimeLabel();
+    ui->pushButtonStart->setIcon(style()->standardIcon(QStyle::SP_MediaPlay));
+}
+
 /**
  * @brief Minuteur::on_pushButton_clicked
  * Start the timer
@@ -74,7 +83,7 @@ void Minuteur::on_pushButtonStart_clicked()
     if (timer.isActive())
     {
         pauseCountDown();
-    } else {
+    } else if (ui->timeEdit->time() != QTime(0,0)){
         startCountDown(ui->timeEdit->time());
     }
 }
@@ -108,7 +117,7 @@ void Minuteur::updateTime()
     time = time.addMSecs(-TIMER_INTERVAL);
     if (time == QTime(0,0))
     {
-        stopTimer();
+        stopCountDown();
         notifyEnd();
     }
     updateTimeLabel();
@@ -142,3 +151,9 @@ void Minuteur::on_pushButtonPlusOne_clicked()
         ui->timeEdit->setTime(ui->timeEdit->time().addSecs(60));
     }
  }
+
+void Minuteur::on_pushButtonStop_clicked()
+{
+    stopCountDown();
+    ui->timeEdit->setTime(QTime(0,0));
+}

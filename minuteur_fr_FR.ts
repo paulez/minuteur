@@ -10,7 +10,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="minuteur.ui" line="38"/>
+        <location filename="minuteur.ui" line="51"/>
         <location filename="minuteur_autogen/include/ui_minuteur.h" line="89"/>
         <source>HH:mm:ss</source>
         <translation type="unfinished"></translation>
@@ -21,12 +21,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="minuteur.ui" line="52"/>
-        <source>+1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="minuteur.ui" line="66"/>
+        <location filename="minuteur.ui" line="99"/>
         <source>00:00:00</source>
         <translation type="unfinished"></translation>
     </message>

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>363</width>
-    <height>192</height>
+    <width>301</width>
+    <height>147</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,15 +17,28 @@
    <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>0</x>
       <y>10</y>
-      <width>276</width>
-      <height>115</height>
+      <width>291</width>
+      <height>91</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
        <item>
         <widget class="QTimeEdit" name="timeEdit">
          <property name="minimumSize">
@@ -47,11 +60,31 @@
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButtonPlusOne">
+        <widget class="QPushButton" name="pushButtonStop">
          <property name="text">
-          <string>+1</string>
+          <string/>
          </property>
         </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButtonPlusOne">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
        </item>
       </layout>
      </item>
@@ -59,7 +92,7 @@
       <widget class="QLabel" name="timeLabel">
        <property name="font">
         <font>
-         <pointsize>32</pointsize>
+         <pointsize>38</pointsize>
         </font>
        </property>
        <property name="text">
@@ -78,7 +111,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>363</width>
+     <width>301</width>
      <height>22</height>
     </rect>
    </property>
