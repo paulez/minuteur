@@ -16,7 +16,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="minuteur.ui" line="45"/>
         <location filename="minuteur_autogen/include/ui_minuteur.h" line="90"/>
         <source>Start</source>
         <translation type="unfinished"></translation>

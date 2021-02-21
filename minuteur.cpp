@@ -55,6 +55,14 @@ void Minuteur::startCountDown(QTime userStartTime)
     time = userStartTime;
     updateTimeLabel();
     timer.start(TIMER_INTERVAL);
+    ui->pushButtonStart->setIcon(style()->standardIcon(QStyle::SP_MediaPause));
+}
+
+void Minuteur::pauseCountDown()
+{
+    timer.stop();
+    ui->timeEdit->setTime(time);
+    ui->pushButtonStart->setIcon(style()->standardIcon(QStyle::SP_MediaPlay));
 }
 
 /**
@@ -63,7 +71,12 @@ void Minuteur::startCountDown(QTime userStartTime)
  */
 void Minuteur::on_pushButtonStart_clicked()
 {
-    startCountDown(ui->timeEdit->time());
+    if (timer.isActive())
+    {
+        pauseCountDown();
+    } else {
+        startCountDown(ui->timeEdit->time());
+    }
 }
 
 /**

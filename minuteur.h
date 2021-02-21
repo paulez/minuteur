@@ -31,6 +31,7 @@ private:
     QTimer timer;
     QTime time;
     QString remainingTimeStr();
+    void pauseCountDown();
     void startCountDown(QTime startTime);
     void updateTimeLabel();
     void stopTimer();
