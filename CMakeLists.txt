@@ -52,3 +52,4 @@ target_link_libraries(minuteur PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
 
 install(TARGETS minuteur DESTINATION bin)
+install(FILES minuteur.desktop DESTINATION /usr/share/applications)

@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Minuteur
+Exec=minuteur
+Icon=minuteur
+Type=Application
+Categories=Utility;
