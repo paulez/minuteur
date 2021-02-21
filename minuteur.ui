@@ -19,6 +19,10 @@
   <property name="windowTitle">
    <string>Minuteur</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>minuteur.png</normaloff>minuteur.png</iconset>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <property name="sizePolicy">
     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">

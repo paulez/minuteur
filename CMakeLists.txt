@@ -53,3 +53,4 @@ qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
 
 install(TARGETS minuteur DESTINATION bin)
 install(FILES minuteur.desktop DESTINATION /usr/share/applications)
+install(FILES minuteur.png DESTINATION /usr/share/icons/hicolor/48x48/apps/)
