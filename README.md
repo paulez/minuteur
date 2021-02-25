@@ -10,6 +10,22 @@ It uses cmake to build and Qt5 as GUI library.
 
 ## Installing
 
+### Dependencies
+
+#### Ubuntu
+
+```
+apt install build-essential git cmake qtbase5-dev
+```
+
+#### Fedora
+
+```
+dnf install git cmake gcc-c++ qt5-qtbase-devel
+```
+
+### Building
+
 ```
 git clone https://github.com/paulez/minuteur.git
 cd minuteur
