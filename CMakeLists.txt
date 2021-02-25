@@ -24,10 +24,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 #    endif()
 #endif()
 
-find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets LinguistTools REQUIRED)
-find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets LinguistTools REQUIRED)
-
-set(TS_FILES minuteur_fr_FR.ts)
+find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets REQUIRED)
+find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 
 if(ANDROID)
   add_library(minuteur SHARED
@@ -48,8 +46,6 @@ else()
 endif()
 
 target_link_libraries(minuteur PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
-
-qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
 
 install(TARGETS minuteur DESTINATION bin)
 install(FILES minuteur.desktop DESTINATION /usr/share/applications)
